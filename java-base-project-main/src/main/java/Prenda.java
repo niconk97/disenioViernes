@@ -19,6 +19,11 @@ public abstract class Prenda {
     }
 
     public abstract double precio();
+
+    public String tipo(){
+        return this.getClass().getName();
+    }
+
 }
 
 
