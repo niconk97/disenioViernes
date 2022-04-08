@@ -13,21 +13,21 @@ public class Main {
         Saco sacoNuevo = new Saco(nuevo, 2000);
         Saco sacoPromo = new Saco(promocion300pesos, 1250);
         Camisa camisaLiquidacion = new Camisa(liquidacion, 3000);
+        Pantalon unPantalonPromo = new Pantalon(promocion300pesos, 3000);
 
         List<Prenda> listaDePrendas = new ArrayList<Prenda>();
 
         listaDePrendas.add(sacoNuevo);
         listaDePrendas.add(sacoPromo);
         listaDePrendas.add(camisaLiquidacion);
+        listaDePrendas.add(unPantalonPromo);
 
         VentaEfectivo unaVentaEnEfectivo = new VentaEfectivo(LocalDate.now(), listaDePrendas);
 
         //System.out.println(unaVentaEnEfectivo.ganancias());
 
         Local macowins = new Local();
-
         macowins.registrarVenta(unaVentaEnEfectivo);
-
         System.out.println(macowins.gananciasSegunDia(LocalDate.now()));
 
     }
